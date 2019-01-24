@@ -151,18 +151,19 @@ end
    
   
   def team_names
-    # difference between map & .each .. return value is different. map will return an array. .each returns the element.
     game_hash.values.map{|team| team.fetch(:team_name)}
   end
+  
+  #difference between map & .each .. return value is different. map will return an array. .each returns the element.
   
   def player_numbers(team_name)
     empty = []
     game_hash.each do |team, data|
-      if data[:team_name] == team_name #checking the team_name key with team_name argument. If it's in the right key, then it can move forawrd with the if statement data.
-      data[:players].map do |a| 
-      empty << a[1].fetch(:number) #a is the player and [1] is the stats of the player
+      if data[:team_name] == team_name #checking the team_name key with team_name argument. If             it's in the right key, then it can move forawrd with the if statement data.
+        data[:players].map do |a| 
+          empty << a[1].fetch(:number) #a is the player and [1] is the stats of the player
+        end
       end
-    end
     end
     empty
    end
@@ -180,12 +181,13 @@ end
   
   def big_shoe_rebounds
     players = []
-   game_hash.each do |team, data|
+    
+    game_hash.each do |team, data|
       data[:players].each do |a|
         players << a
       #trying to get all the player to one big hash so that it can be sorted.
       end
-   end
+    end
     size = players.sort_by do |player|
       player[1].fetch(:shoe)
     end
