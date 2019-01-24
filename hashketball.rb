@@ -200,6 +200,7 @@ end
       binding.pry
       data[:players].each do |player, stat|
         
+    end
   end
   
   
