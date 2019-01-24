@@ -199,6 +199,7 @@ end
     game_hash.each do |team, data|
       data[:players].each do |player, stats|
         binding.pry
+        # if
       end
     end
   end
