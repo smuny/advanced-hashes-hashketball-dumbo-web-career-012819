@@ -197,10 +197,8 @@ end
   
   def player_by_number(number) #return the player who has the number. find 
     game_hash.each do |team, data|
-      binding.pry
-    
-      # data[:players].each do |player|
-
+      data[:players].each do |player, stats|
+        binding.pry
     end
   end
   player_by_number(33)
