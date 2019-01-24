@@ -199,10 +199,10 @@ end
     game_hash.each do |team, data|
       binding.pry
       # data[:players].each do |player|
-        
-        
+
     end
   end
+  player_by_number(33)
   
   
   
