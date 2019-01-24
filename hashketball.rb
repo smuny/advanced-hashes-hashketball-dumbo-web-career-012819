@@ -199,7 +199,8 @@ end
     game_hash.each do |team, data|
       data[:players].each do |player, stats|
         binding.pry
-        # if
+        # if stats(:number) == number
+       # return player
       end
     end
   end
