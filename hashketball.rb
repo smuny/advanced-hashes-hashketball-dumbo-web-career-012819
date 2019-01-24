@@ -195,6 +195,13 @@ end
     size.last[1].fetch(:rebounds) #size.last #it's sorted and the largest is the last element
   end
   
+  def player_by_number(number) #return the player who has the number. find 
+    game_hash.each do |team, data|
+      binding.pry
+      data[:players].each do |player, stat|
+        
+  end
+  
   
   
   
